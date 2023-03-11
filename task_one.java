@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -8,11 +10,11 @@ public class task_one {
 
     public static void main(String[] args) {
         
-        List<Integer> userList = List.of(20,1,4,54,3,46,7,5);
+        ArrayList<Integer> userList = new ArrayList<>(Arrays.asList(10 , 4, 3, 5, 6, 75, 32, 51));
         Iterator<Integer> iter = userList.iterator();
         while (iter.hasNext()) {
-            iter.next();
-            if ((iter.next() % 2) == 0) {
+            Integer x = iter.next();
+            if ((x % 2) == 0) {
                 iter.remove();
             } 
         }
